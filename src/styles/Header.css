@@ -1,0 +1,115 @@
+nav.Header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5px 1rem;
+	width: 100%;
+	position: absolute;
+	color: white;
+}
+
+nav.Header .Header__logo a {
+	color: white;
+}
+
+nav.Header .Header__items {
+	/* width: 50%; */
+	display: flex;
+	align-items: center;
+	direction: rtl;
+}
+
+
+nav.Header .Header__items:nth-child(2) .Header__item {
+	margin: 0 5px;
+}
+
+
+nav.Header .Header__items .Header__item a {
+	color: white;
+}
+
+nav.Header .Header__items .Header__item {
+	transition: all .3s;
+}
+
+nav.Header .Header__items .Header__item.fa-user-circle {
+	font-size: 1.5rem;
+}
+
+nav.Header .Header__items .Header__itemsbtn {
+	padding: 8px 12px !important;
+	border-radius: 100px;
+	cursor: pointer;
+	position: relative !important;
+	background-color: transparent;
+	overflow: hidden;
+	color: white;
+	font-size: 1.2rem;
+	z-index: 1;
+}
+
+nav.Header .Header__items .Header__itemsbtn::before {
+	content: '';
+	width: 200%;
+	height: 100%;
+	position: absolute;
+	background-size: 200% auto;
+	background-image: linear-gradient(to left, #fa0347 0%, #fc561c 25%, #fa0347 50%,  #fc561c 75%, #fa0347 100%);
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: -1;
+	transform: translateX(50%);
+	transition: all .3s;
+}
+
+nav.Header .Header__items .Header__itemsbtn:hover::before {
+	transform: translateX(0);
+}
+
+nav.Header .Header__items .Header__item {
+	position: relative;
+	padding: 5px;
+}
+
+.Header__items .Header__item:hover {
+  opacity: .8;
+}
+
+.Header__items .Header__item::after {
+  content: '';
+  width: 0;
+  height: 1px;
+  background-color: #000;
+  position: absolute;
+  bottom: 0;
+  transition: all .3s;
+  transform-origin: left;
+  left: 0;
+}
+
+.Header__items .Header__item:hover::after {
+  width: 100%;
+  transform-origin: right;
+  right: 0;
+}
+
+.Header__items:nth-child(3) .Header__item {
+	cursor: pointer;
+}
+
+.Header__items:nth-child(3) .Header__item::after {
+	display: none;
+}
+
+.Header__items:nth-child(3) .Header__item:hover::after {
+	display: none;
+}
+
+
+
+
+
+

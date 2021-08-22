@@ -1,12 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './styles/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { AuthContextProvider } from './contexts/AuthContext';
+import { MessageContextProvider } from './contexts/MessageContext';
+import { ShowLoaderContextProvider } from './contexts/ShowLoaderContext';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <AuthContextProvider>
+      <MessageContextProvider>
+        <ShowLoaderContextProvider>
+          <App />
+        </ShowLoaderContextProvider>
+      </MessageContextProvider>
+    </AuthContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
