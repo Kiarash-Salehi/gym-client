@@ -1,0 +1,31 @@
+.gymFeature {
+	width: 30%;
+	height: 100%;
+	display: flex;
+	/* align-items: center; */
+	/* justify-content: space-between; */
+	flex-direction: column;
+	direction: rtl;
+}
+
+.gymFeature .gymFeatureInfo p button {
+	display: block;
+	background-image: linear-gradient(to right, #fa0347 0%, #fc561c 100%);
+	border-radius: 10rem;
+	color: #fff;
+}
+
+.gymFeature .gymFeatureIcon {
+	width: 4rem;
+	height: 4rem;
+	border-radius: 10px 10px 50% 10px;
+	background-image: linear-gradient(to bottom right, #fa0347 0%, #fc561c 100%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.gymFeature .gymFeatureIcon img {
+	width: 2.5rem;
+	object-fit: contain;
+}

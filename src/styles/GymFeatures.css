@@ -1,0 +1,36 @@
+.gymFeatures {
+	width: 80%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.gymFeaturesSection {
+	padding: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-direction: column;
+	position: relative;
+	height: 50vh;
+}
+
+.gymFeaturesCircles {
+	position: absolute;
+	z-index: -1;
+}
+
+.gymFeaturesCircles:nth-child(1) {
+	right: 15px;
+	top: 3rem;
+}
+
+.gymFeaturesCircles:nth-child(2) {
+	left: 10rem;
+	top: 8rem;
+}
+
+.gymFeaturesCircles:nth-child(3) {
+	right: 10rem;
+	top: 16rem;
+}

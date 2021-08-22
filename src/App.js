@@ -3,9 +3,9 @@ import './styles/App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './routes/Home';
 import NotFound from './routes/NotFound';
-import Header from './components/Header';
 import Messages from './components/Messages';
 import PreLoader from './components/PreLoader';
+import Footer from './components/Footer';
 import useMessageContext from './contexts/MessageContext';
 import useShowLoaderContext from './contexts/ShowLoaderContext';
 
@@ -43,12 +43,12 @@ function App() {
 			<Messages />
 			{showLoader?.showLoader ? <PreLoader style={{ opacity: 1 }} /> : <PreLoader style={{ opacity: 0, userSelect: 'none', pointerEvents: 'none' }} />}
 			<Router>
-				<Header />
 				<Switch>
 					<Route exact path="/" component={Home} />
 					<Route path="/*" component={NotFound} />
 				</Switch>
 			</Router>
+			<Footer />
 		</>
 	);
 }

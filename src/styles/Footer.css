@@ -1,0 +1,26 @@
+.footer {
+	background-color: #080a19;
+	padding: 1rem;
+	direction: rtl;
+	color: white !important;
+}
+
+.footer .footer__columns {
+	width: 80%;
+	margin: 5px auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+
+.footer .footer__columns .footer__column input {
+	color: #000;
+	font-size: 1rem;
+	padding: 5px;
+}
+
+.footer .footer__columns .footer__column button {
+	font-size: 1rem;
+	/* border-radius: 10rem; */
+	background-image: linear-gradient(to bottom right, #fa0347 0%, #fc561c 100%);
+}

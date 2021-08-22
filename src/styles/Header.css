@@ -4,12 +4,18 @@ nav.Header {
 	align-items: center;
 	padding: 5px 1rem;
 	width: 100%;
-	position: absolute;
-	color: white;
 }
 
-nav.Header .Header__logo a {
-	color: white;
+nav.Header .Header__logo h1 a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+nav.Header .Header__logoIcon {
+	width: 2rem;
+	object-fit: contain;
+	margin: 0 5px;
 }
 
 nav.Header .Header__items {
@@ -19,14 +25,8 @@ nav.Header .Header__items {
 	direction: rtl;
 }
 
-
 nav.Header .Header__items:nth-child(2) .Header__item {
 	margin: 0 5px;
-}
-
-
-nav.Header .Header__items .Header__item a {
-	color: white;
 }
 
 nav.Header .Header__items .Header__item {
@@ -108,6 +108,26 @@ nav.Header .Header__items .Header__item {
 	display: none;
 }
 
+/* Home Header Classes */
+
+nav.Header.home__header {
+	position: absolute;
+	color: white;
+}
+
+nav.Header.home__header .Header__logo a {
+	color: white;
+}
+
+nav.Header.home__header .Header__items .Header__item a {
+	color: white;
+}
+
+nav.Header.home__header .Header__items .Header__item::after {
+	background-color: white;
+}
+
+/* Home Header Classes */
 
 
 
