@@ -1,11 +1,15 @@
 .gymFeature {
 	width: 30%;
+	min-width: 200px;
+	max-width: 80vw;
 	height: 100%;
 	display: flex;
-	/* align-items: center; */
-	/* justify-content: space-between; */
+	align-items: baseline;
+	justify-content: space-between;
 	flex-direction: column;
 	direction: rtl;
+	flex-wrap: wrap;
+	margin: 10px 5px;
 }
 
 .gymFeature .gymFeatureInfo p button {

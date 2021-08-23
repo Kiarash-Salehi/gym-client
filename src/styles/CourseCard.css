@@ -1,6 +1,7 @@
 .courseCard {
 	border: 1px solid #fa0347;
 	width: 20%;
+	min-width: 200px;
 	border-radius: 10px;
 	position: relative;
 	display: flex;

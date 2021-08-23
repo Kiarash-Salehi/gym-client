@@ -3,17 +3,13 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	flex-direction: row-reverse;
+	flex-wrap: wrap;
 }
 
-.gymFeaturesSection {
-	padding: 5px;
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
-	flex-direction: column;
-	position: relative;
-	height: 50vh;
-}
+/* .gymFeatures__header {
+	margin-bottom: 15px;
+} */
 
 .gymFeaturesCircles {
 	position: absolute;

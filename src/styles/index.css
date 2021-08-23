@@ -53,6 +53,10 @@ input {
   outline: none;
 }
 
+.sectionHeaders {
+  margin-bottom: 1.5rem;
+}
+
 .center {
 	display: flex;
 	justify-content: center;

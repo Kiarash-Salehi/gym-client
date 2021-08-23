@@ -19,9 +19,13 @@ const footer = () => {
 				</div>
 				<div className="footer__column">
 					<h2>عضویت در خبر نامه</h2>
+					<p>برای اطلاع از اخبار سایت در خبرنامه عضو شوید.</p>
 					<input type="email" name="emailAddress" placeholder="آدرس ایمیل" className="footer__input" />
 					<button className="footer__btn"><i class="fas fa-paper-plane"></i></button>
 				</div>
+			</div>
+			<div className="footer__dev">
+				<p>Copyright ©2021 All rights reserved | طراح و سازنده سایت: <a href="https://www.kiarashs.ir" target="_blank">KSDev</a></p>
 			</div>
 		</div>
 	);
