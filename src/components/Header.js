@@ -26,8 +26,7 @@ function Header({ className }) {
 					<div className="Header__item"><Link to="/">خانه</Link></div>
 					<div className="Header__item"><Link to="/about-us">درباره ما</Link></div>
 					<div className="Header__item"><Link to="/courses">دوره ها</Link></div>
-					<div className="Header__item"><Link to="/news">اخبار باشگاه</Link></div>
-					<div className="Header__item"><Link to="/trainers">مربی ها</Link></div>
+					{/* <div className="Header__item"><Link to="/news">اخبار باشگاه</Link></div> */}
 					<div className="Header__item"><Link to="/contact-us">تماس با ما</Link></div>
 				</div>
 			</div>

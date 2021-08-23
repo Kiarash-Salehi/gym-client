@@ -19,7 +19,7 @@ nav.Header .Header__logoIcon {
 }
 
 nav.Header .Header__items {
-	width: 70%;
+	width: 63%;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -218,7 +218,7 @@ nav.Header.home__header .Header__hamburger span {
 	}
 
   nav.Header .Header__items .Header__pagesLinks .Header__item::after {
-		color: #000 !important;
+		background-color: #000 !important;
 		z-index: 6;
 	}
 }
