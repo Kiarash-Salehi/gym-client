@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import '../styles/Header.css';
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 
 function Header({ className }) {
 	const headerItems = useRef(null);
