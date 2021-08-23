@@ -25,7 +25,7 @@ const footer = () => {
 				</div>
 			</div>
 			<div className="footer__dev">
-				<p>Copyright ©2021 All rights reserved | طراح و سازنده سایت: <a href="https://www.kiarashs.ir" target="_blank">KSDev</a></p>
+				<p>Copyright ©2021 All rights reserved | طراح و سازنده سایت: <a rel="noreferrer" href="https://www.kiarashs.ir" target="_blank">KSDev</a></p>
 			</div>
 		</div>
 	);
