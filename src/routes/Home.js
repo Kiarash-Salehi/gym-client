@@ -1,7 +1,8 @@
 import '../styles/Home.css';
-import Header from '../components/Header';
+import Layout from '../components/Layout';
 import GymFeatures from '../components/GymFeatures';
 import Courses from '../components/Courses';
+import NewsLetter from '../components/NewsLetter';
 import { useState } from 'react';
 
 function Home() {
@@ -24,63 +25,57 @@ function Home() {
     }
   };
   return (
-    <div className="home">
-      <Header className="home__header" />
-      <section className="home__hero">
-        <span>
-          <span>از همین امروز شروع کنید</span>
-          <span><button>ثبت نام</button>به ما بپیوندید</span>
-        </span>
-      </section>
-      <section className="home__gymFeaturesSection">
-        <GymFeatures />
-      </section>
-      <section className="home__menCourses">
-        <img className="home__menCoursesBgImg" src="bg.png" alt="background" />
-        <h2 className="sectionHeaders">دوره های آقایان</h2>
-        <Courses gender="men" />
-      </section>
-      <section className="home__womenCourses">
-        <h2 className="sectionHeaders">دوره های بانوان</h2>
-        <Courses gender="women" />
-      </section>
-      <section className="home__bmi">
-        <img src="bmibg.webp" alt="bmi" />
-        <div className="home__bmiInfo">
-          <div>
-            <h2><span>bmi</span> خود را اندازه بگیرید</h2>
-            <div className="home__bmiForm">
-              <form onSubmit={bmiFormHandler}>
-                <div>
-                  <label>قد
-                    <input type="number" value={bmiHeightInput} onChange={e => setBmiHeightInput(e.target.value)} placeholder="قد / cm" required />
-                  </label>
-                  <label>وزن
-                    <input type="number" value={bmiWeightInput} onChange={e => setBmiWeightInput(e.target.value)} placeholder="وزن / kg" required />
-                  </label>
-                </div>
-                <div>
-                  <button type="submit">حساب کردن bmi</button>
-                  <div className="home__bmiAnswer"></div>
-                </div>
-              </form>
-              {bmiResultNum && <div className="home__bmiRes">
-                <span><b>توده بدنی (BMI): </b></span><span>{bmiResultNum}</span>
-                <p><b>وضعیت: </b>{bmiResult}</p>
-              </div>}
+    <Layout headerClassNames="tr__header">
+      <div className="home">
+        <section className="home__hero">
+          <span>
+            <span>از همین امروز شروع کنید</span>
+            <span><button>ثبت نام</button>به ما بپیوندید</span>
+          </span>
+        </section>
+        <section className="home__gymFeaturesSection">
+          <GymFeatures />
+        </section>
+        <section className="home__menCourses">
+          <img className="home__menCoursesBgImg" src="bg.png" alt="background" />
+          <h2 className="sectionHeaders">دوره های آقایان</h2>
+          <Courses gender="men" />
+        </section>
+        <section className="home__womenCourses">
+          <h2 className="sectionHeaders">دوره های بانوان</h2>
+          <Courses gender="women" />
+        </section>
+        <section className="home__bmi">
+          <img className="bgImgs" src="bmibg.webp" alt="bmi" />
+          <div className="home__bmiInfo">
+            <div>
+              <h2><span>bmi</span> خود را اندازه بگیرید</h2>
+              <div className="home__bmiForm">
+                <form onSubmit={bmiFormHandler}>
+                  <div>
+                    <label>قد
+                      <input type="number" value={bmiHeightInput} onChange={e => setBmiHeightInput(e.target.value)} placeholder="قد / cm" required />
+                    </label>
+                    <label>وزن
+                      <input type="number" value={bmiWeightInput} onChange={e => setBmiWeightInput(e.target.value)} placeholder="وزن / kg" required />
+                    </label>
+                  </div>
+                  <div>
+                    <button type="submit">حساب کردن bmi</button>
+                    <div className="home__bmiAnswer"></div>
+                  </div>
+                </form>
+                {bmiResultNum && <div className="home__bmiRes">
+                  <span><b>توده بدنی (BMI): </b></span><span>{bmiResultNum}</span>
+                  <p><b>وضعیت: </b>{bmiResult}</p>
+                </div>}
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section className="home__newsletter">
-        <img src="bg.png" alt="bg" />
-        <h2>عضویت در خبرنامه</h2>
-        <div>
-          <input type="email" name="emailAddress" placeholder="آدرس ایمیل" />
-          <button className="home__newsletterBtn">عضویت</button>
-        </div>
-      </section>
-    </div>
+        </section>
+        <NewsLetter />
+      </div>
+    </Layout>
   );
 }
 

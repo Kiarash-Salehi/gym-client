@@ -1,0 +1,86 @@
+.contact__ways .contact__map {
+	width: 100%;
+	min-height: 400px;
+	height: 70vh;
+	padding: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.contact__ways .contact__map iframe {
+	width: 80%;
+	height: 100%;
+}
+
+.contact__ways .contact__info>div {
+	width: 50%;
+	padding: 10px;
+	direction: rtl;
+}
+
+.contact__ways .contact__info {
+	width: 100%;
+	height: 100%;
+	padding: 30px;
+	padding: 30px 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.contact__ways .contact__info .contact__address {
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+}
+
+.contact__ways .contact__info .contact__address>div {
+	display: flex;
+	align-items: center;
+}
+
+.contact__ways .contact__info .contact__address>div i {
+	font-size: 3rem;
+	margin: 0 10px;
+}
+
+.contact__ways .contact__info .contact__messageForm form {
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	font-size: 1rem;
+}
+
+.contact__ways .contact__info .contact__messageForm form>div {
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+
+.contact__ways .contact__info .contact__messageForm form label input,
+.contact__ways .contact__info .contact__messageForm form label textarea {
+	display: block;
+	padding: 5px;
+	outline: none;
+	border: 1px solid #fa0347;
+	border-radius: 5px;
+	margin-top: 15px;
+	margin: 10px;
+}
+
+.contact__ways .contact__info .contact__messageForm form label textarea {
+	width: 100%;
+}
+
+.contact__ways .contact__info .contact__messageForm form button {
+	border-radius: 10rem;
+	background-image: linear-gradient(to right, #fa0347 0%, #fc561c 100%);
+	padding: 10px;
+}
+
+@media screen and (max-width: 600px) {
+	.contact__info {
+		flex-direction: column-reverse;
+	}
+}

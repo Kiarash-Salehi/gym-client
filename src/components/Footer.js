@@ -2,7 +2,7 @@ import '../styles/Footer.css';
 
 const footer = () => {
 	return (
-		<div className="footer">
+		<footer className="footer">
 			<div className="footer__columns">
 				<div className="footer__column">
 					<h2>درباره ما</h2>
@@ -14,7 +14,7 @@ const footer = () => {
 						<p><b>آدرس: </b>تهران، خیابان ولیعصر، خیابان مختاری غربی</p>
 					</div>
 					<div>
-						<p><b>تلفن: </b>55387043-021</p>
+						<p><b>تلفن: </b><a rel="noreferrer" href="tel:+982155387043">55387043-021</a></p>
 					</div>
 				</div>
 				<div className="footer__column">
@@ -27,7 +27,7 @@ const footer = () => {
 			<div className="footer__dev">
 				<p>Copyright ©2021 All rights reserved | طراح و سازنده سایت: <a rel="noreferrer" href="https://www.kiarashs.ir" target="_blank">KSDev</a></p>
 			</div>
-		</div>
+		</footer>
 	);
 };
 

@@ -121,30 +121,35 @@ nav.Header .Header__items .Header__item {
 	display: none;
 }
 
-/* Home Header Classes */
+/* Transparent Header Classes */
 
-nav.Header.home__header {
+nav.Header.tr__header {
 	position: absolute;
 	color: white;
+	z-index: 3;
 }
 
-nav.Header.home__header .Header__logo a {
+nav.Header.tr__header .Header__logo a {
 	color: white;
 }
 
-nav.Header.home__header .Header__items .Header__item a {
+nav.Header.tr__header .Header__items .Header__item a {
 	color: white;
 }
 
-nav.Header.home__header .Header__items .Header__pagesLinks .Header__item::after {
+nav.Header.tr__header .Header__items .Header__pagesLinks .Header__item::after {
 	background-color: white;
 }
 
-nav.Header.home__header .Header__hamburger span {
+nav.Header.tr__header .Header__hamburger span {
   background-color: #fff;
 }
 
-/* Home Header Classes */
+nav.Header.tr__header .Header__items .fas.Header__item {
+	color: #fff;
+}
+
+/* Transparent Header Classes */
 
 /* Responsive css */
 
@@ -207,6 +212,14 @@ nav.Header.home__header .Header__hamburger span {
   nav.Header .Header__items .Header__item {
 		margin: 10px 0;
 		padding: 5px;
+	}
+
+  nav.Header .Header__items .fas.Header__item {
+		color: #000 !important;
+	}
+
+	nav.Header.home__header .Header__items .fas.Header__item {
+		color: #000 !important;
 	}
 
   nav.Header .Header__items .Header__otherLinks span {

@@ -1,0 +1,21 @@
+.coursePage__menCourses,
+.coursePage__womenCourses {
+	position: relative;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding: 10px 0;
+	padding: 50px 0;
+}
+
+.coursePage__bmi>img,
+.coursePage__menCourses .coursePage__menCoursesBgImg {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transform: rotateY(180deg);
+}

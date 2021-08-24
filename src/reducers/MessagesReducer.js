@@ -7,7 +7,7 @@ export const messagesReducer = (state, action) => {
 		case 'SET_MESSAGES':
 			const dispatch = action.payload.dispatch;
 			const message = action.payload.message;
-			const id = state.messages.length;
+			const id = (Math.random() * 100) + state.messages.length;
 			const status = action.payload.status;
 			setTimeout(() => {
 				dispatch({ type: 'CLEAR_MESSAGE', payload: { id } });

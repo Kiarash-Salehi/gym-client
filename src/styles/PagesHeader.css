@@ -1,0 +1,13 @@
+.PagesHeader {
+	position: relative;
+	min-height: 400px;
+	height: 60vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+}
+
+.PagesHeader h2 span {
+	font-size: 3rem;
+}

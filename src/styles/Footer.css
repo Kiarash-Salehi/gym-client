@@ -36,6 +36,10 @@
 	color: #fff;
 }
 
+.footer a {
+	color: #fff !important;
+}
+
 @media screen and (max-width: 600px) {
 	.footer .footer__columns {
 		flex-direction: column;

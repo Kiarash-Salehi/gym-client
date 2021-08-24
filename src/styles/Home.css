@@ -143,44 +143,6 @@
 	margin: 10px 0;
 }
 
-.home__newsletter {
-	height: 40vh;
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	font-size: 2rem;
-}
-
-.home__newsletter>img {
-	position: absolute;
-	left: 0;
-	top: 0;
-	z-index: -1;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
-
-.home__newsletter>div {
-	direction: rtl;
-}
-
-.home__newsletter input {
-	font-size: 1.2rem;
-	background-color: #fff;
-	padding: 5px;
-	border-radius: 10rem;
-}
-
-.home__newsletter button {
-	font-size: 1.2rem;
-	border-radius: 10rem;
-	background-image: linear-gradient(to right, #fa0347 0%, #fc561c 100%);
-	margin: 5px;
-}
-
 @media screen and (max-width: 600px) {
 	.home .home__bmi .home__bmiInfo .home__bmiForm form {
 		align-items: baseline;

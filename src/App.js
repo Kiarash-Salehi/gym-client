@@ -2,16 +2,16 @@ import { useEffect } from 'react';
 import './styles/App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './routes/Home';
+import About from './routes/About';
+import CoursesPage from './routes/CoursesPage';
+import Contact from './routes/Contact';
 import NotFound from './routes/NotFound';
-import Messages from './components/Messages';
-import PreLoader from './components/PreLoader';
-import Footer from './components/Footer';
 import useMessageContext from './contexts/MessageContext';
 import useShowLoaderContext from './contexts/ShowLoaderContext';
 
 function App() {
 	const [, messagesDispatch] = useMessageContext();
-	const [showLoader, showLoaderDispatch] = useShowLoaderContext();
+	const [, showLoaderDispatch] = useShowLoaderContext();
 	useEffect(() => {
 		showLoaderDispatch({ type: 'SHOW_LOADER' })
 		window.addEventListener('load', () => showLoaderDispatch({ type: 'HIDE_LOADER' }));
@@ -39,17 +39,15 @@ function App() {
 		// eslint-disable-next-line
 	}, []);
 	return (
-		<>
-			<Messages />
-			{showLoader?.showLoader ? <PreLoader style={{ opacity: 1 }} /> : <PreLoader style={{ opacity: 0, userSelect: 'none', pointerEvents: 'none' }} />}
-			<Router>
-				<Switch>
-					<Route exact path="/" component={Home} />
-					<Route path="/*" component={NotFound} />
-				</Switch>
-			</Router>
-			<Footer />
-		</>
+		<Router>
+			<Switch>
+				<Route exact path="/" component={Home} />
+				<Route exact path="/about" component={About} />
+				<Route exact path="/courses" component={CoursesPage} />
+				<Route exact path="/contact" component={Contact} />
+				<Route path="/*" component={NotFound} />
+			</Switch>
+		</Router>
 	);
 }
 
