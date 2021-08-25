@@ -1,0 +1,114 @@
+.auth {
+	min-height: 450px;
+	height: 80vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.auth .auth__container {
+	width: 30vw;
+	min-width: 400px;
+	height: 450px;
+	background-color: #fff;
+	border-radius: 5px;
+	padding: 5px;
+	margin-top: 30px;
+	overflow: hidden;
+}
+
+.auth .auth__container .auth__btns {
+	margin: 5px auto;
+	display: flex;
+	justify-content: center;
+	position: relative;
+}
+
+.auth .auth__container .auth__btns .auth__button {
+	padding: 10px 30px;
+	/* margin: 10px auto; */
+	border: 1px solid #fa0347;
+	z-index: 1;
+}
+
+.auth .auth__container .auth__btns .auth__button:nth-child(2) {
+	border-radius: 10rem 0 0 10rem;
+	border-right: 0;
+}
+
+.auth .auth__container .auth__btns .auth__button:nth-child(3) {
+	border-radius: 0 10rem 10rem 0;
+	border-left: 0;
+}
+
+.auth .auth__container .auth__btns .auth__btnColor {
+	position: absolute;
+	height: 100%;
+	width: 50%;
+	width: 6rem;
+	border-radius: 10rem;
+	background-image: linear-gradient(to right, #fa0347 0%, #fc561c 100%);
+	top: 0;
+	left: 25%;
+	z-index: 0;
+	transition: all .3s;
+}
+
+.auth .auth__container .auth__btns.auth__leftBtns .auth__btnColor {
+	left: 49%;
+}
+
+.auth .auth__container .auth__forms {
+	width: 200%;
+	height: inherit;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all .3s;
+}
+
+.auth .auth__container .auth__forms>div {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+}
+
+.auth .auth__container .auth__forms>div form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	direction: rtl;
+}
+
+.auth .auth__container .auth__forms>div form input {
+	padding: 10px;
+	border-radius: 5px;
+	background-color: rgb(226, 226, 226);
+	border-bottom: 1px solid #fa0347;
+	margin: 10px 0;
+}
+
+.auth .auth__container .auth__forms>div form button {
+	border-radius: 10rem;
+	background-image: linear-gradient(to right, #fa0347 0%, #fc561c 100%);
+	padding: 10px 50px;
+}
+
+.auth__signup {
+	margin-bottom: 40px;
+}
+
+@media screen and (max-width: 600px) {
+	.auth .auth__container {
+		width: 300px;
+		min-width: 200px;
+	}
+
+	.auth .auth__container .auth__btns .auth__btnColor {
+		left: 18%;
+	}
+}

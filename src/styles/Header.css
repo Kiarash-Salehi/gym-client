@@ -26,6 +26,17 @@ nav.Header .Header__items {
 	direction: rtl;
 }
 
+nav.Header .Header__items .Header__otherLinks {
+	display: flex;
+	align-items: center;
+}
+
+nav.Header .Header__items .Header__otherLinks a button {
+	border: 2px solid #000;
+	border-radius: 10rem;
+	padding: 10px;
+}
+
 nav.Header .Header__items .Header__pagesLinks {
 	display: flex;
 	align-items: center;
@@ -146,6 +157,11 @@ nav.Header.tr__header .Header__hamburger span {
 }
 
 nav.Header.tr__header .Header__items .fas.Header__item {
+	color: #fff;
+}
+
+nav.Header.tr__header .Header__items .Header__otherLinks a button {
+	border: 2px solid #fff;
 	color: #fff;
 }
 

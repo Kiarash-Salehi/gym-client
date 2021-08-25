@@ -11,7 +11,7 @@ function Messages() {
           <div className={classes} key={message.id}>
             <small onClick={() => {
               document.getElementsByClassName(message.id)[0].classList.add('messages__closed');
-            }}><b>x</b></small>
+            }}><b><i className="fas fa-times"></i></b></small>
             <p>{message.message}</p>
           </div>
         );
