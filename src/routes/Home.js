@@ -2,8 +2,9 @@ import '../styles/Home.css';
 import Layout from '../components/Layout';
 import GymFeatures from '../components/GymFeatures';
 import Courses from '../components/Courses';
-import NewsLetter from '../components/NewsLetter';
+// import NewsLetter from '../components/NewsLetter';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Home() {
   const [bmiHeightInput, setBmiHeightInput] = useState(null);
@@ -28,9 +29,10 @@ function Home() {
     <Layout headerClassNames="tr__header">
       <div className="home">
         <section className="home__hero">
+          <img className="bgImgs" src="download.jpg" alt="background" />
           <span>
             <span>از همین امروز شروع کنید</span>
-            <span><button>ثبت نام</button>به ما بپیوندید</span>
+            <span><button><Link to="/courses" style={{ color: '#fff' }}>ثبت نام</Link></button>به ما بپیوندید</span>
           </span>
         </section>
         <section className="home__gymFeaturesSection">
@@ -73,7 +75,7 @@ function Home() {
             </div>
           </div>
         </section>
-        <NewsLetter />
+        {/* <NewsLetter /> */}
       </div>
     </Layout>
   );

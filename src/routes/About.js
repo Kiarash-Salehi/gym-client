@@ -1,7 +1,7 @@
 import Layout from '../components/Layout';
 import PagesHeader from '../components/PagesHeader';
 import GymFeatures from '../components/GymFeatures';
-import NewsLetter from '../components/NewsLetter';
+// import NewsLetter from '../components/NewsLetter';
 import '../styles/About.css';
 
 const About = () => {
@@ -12,7 +12,7 @@ const About = () => {
 				<section className="about__gymFeaturesSection">
 					<GymFeatures />
 				</section>
-				<NewsLetter />
+				{/* <NewsLetter /> */}
 			</div>
 		</Layout>
 	);

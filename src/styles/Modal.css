@@ -15,7 +15,7 @@
 	pointer-events: none;
 }
 
-.modal.modal__closed .moda__content {
+.modal.modal__closed .modal__content {
 	transform: translate(-50%, -50%) scale(0);
 }
 
@@ -26,7 +26,7 @@
 	cursor: pointer;
 }
 
-.moda__content {
+.modal__content {
 	position: fixed;
 	width: 100%;
 	height: 100%;
@@ -42,9 +42,4 @@
 	display: flex;
 	justify-content: center;
 	padding: 10px;
-}
-
-.moda__content>div {
-	width: 60%;
-	height: 100%;
 }

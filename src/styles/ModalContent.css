@@ -1,0 +1,38 @@
+.modalContent__container {
+	width: 60%;
+	height: 100%;
+	overflow-y: scroll;
+}
+
+.modalContent__title {
+	margin: 5px auto;
+	font-size: 1rem;
+}
+
+.modalContent__container .modalContent__img {
+	width: 80%;
+	margin: 10px auto;
+	border-radius: 5px;
+}
+
+.modalContent__container::-webkit-scrollbar {
+	width: .85rem;
+	background-color: #f5f5f5;
+	border-radius: 500px;
+}
+
+.modalContent__container::-webkit-scrollbar-track {
+  background: #f5f5f5;
+	border-radius: 500px;
+}
+
+.modalContent__container::-webkit-scrollbar-thumb {
+  background: #888;
+	border-radius: 500px;
+	padding: 3px;
+	border: 3px solid #f5f5f5;
+}
+
+.modalContent__container::-webkit-scrollbar-thumb:hover {
+  background: #777; 
+}

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import '../styles/GymFeature.css';
 import Modal from './Modal';
 
-const GymFeature = ({ iconSrc, title, description, btnText, content }) => {
+const GymFeature = ({ iconSrc, title, description, btnText, content, modalDescription, images }) => {
 	const [openModal, setOpenModal] = useState(false);
 	return (
 		<div className="gymFeature">
@@ -14,7 +14,7 @@ const GymFeature = ({ iconSrc, title, description, btnText, content }) => {
 					{btnText && (
 						<>
 							<button onClick={() => setOpenModal(!openModal)}>{btnText}</button>
-							<Modal content={content ? content : '0'} openModal={openModal} setOpenModal={setOpenModal}></Modal>
+							<Modal images={images} content={content ? content : '0'} openModal={openModal} setOpenModal={setOpenModal} description={modalDescription}></Modal>
 						</>
 					)}
 				</p>

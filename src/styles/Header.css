@@ -250,6 +250,11 @@ nav.Header.tr__header .Header__items .Header__otherLinks a button {
 		background-color: #000 !important;
 		z-index: 6;
 	}
+
+	nav.Header.tr__header .Header__items .Header__otherLinks a button {
+		border: 2px solid #000;
+		color: #000;
+	}
 }
 
 /* Responsive css */

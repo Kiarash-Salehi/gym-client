@@ -1,7 +1,7 @@
 import Layout from '../components/Layout';
 import PagesHeader from '../components/PagesHeader';
 import Courses from '../components/Courses';
-import NewsLetter from '../components/NewsLetter';
+// import NewsLetter from '../components/NewsLetter';
 import '../styles/CoursesPage.css';
 
 const CoursesPage = () => {
@@ -18,7 +18,7 @@ const CoursesPage = () => {
           <h2 className="sectionHeaders">دوره های بانوان</h2>
           <Courses gender="women" />
         </section>
-        <NewsLetter />
+        {/* <NewsLetter /> */}
 			</div>
 		</Layout>
 	);

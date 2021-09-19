@@ -5,7 +5,7 @@ import Home from './routes/Home';
 import About from './routes/About';
 import CoursesPage from './routes/CoursesPage';
 import Contact from './routes/Contact';
-import Auth from './routes/Auth';
+// import Auth from './routes/Auth';
 import NotFound from './routes/NotFound';
 import useMessageContext from './contexts/MessageContext';
 import useShowLoaderContext from './contexts/ShowLoaderContext';
@@ -33,9 +33,9 @@ function App() {
 			}
 		}));
 		return () => {
+			window.removeEventListener('load');
 			window.removeEventListener('offline');
 			window.removeEventListener('online');
-			window.removeEventListener('load');
 		};
 		// eslint-disable-next-line
 	}, []);
@@ -46,7 +46,7 @@ function App() {
 				<Route exact path="/about" component={About} />
 				<Route exact path="/courses" component={CoursesPage} />
 				<Route exact path="/contact" component={Contact} />
-				<Route exact path="/auth" component={Auth} />
+				{/* <Route exact path="/auth" component={Auth} /> */}
 				<Route path="/*" component={NotFound} />
 			</Switch>
 		</Router>
