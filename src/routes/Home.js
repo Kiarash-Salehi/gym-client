@@ -43,10 +43,10 @@ function Home() {
           <h2 className="sectionHeaders">دوره های آقایان</h2>
           <Courses gender="men" />
         </section>
-        <section className="home__womenCourses">
+        {/* <section className="home__womenCourses">
           <h2 className="sectionHeaders">دوره های بانوان</h2>
           <Courses gender="women" />
-        </section>
+        </section> */}
         <section className="home__bmi">
           <img className="bgImgs" src="bmibg.webp" alt="bmi" />
           <div className="home__bmiInfo">

@@ -4,10 +4,10 @@ const footer = () => {
 	return (
 		<footer className="footer">
 			<div className="footer__columns">
-				<div className="footer__column">
+				{/* <div className="footer__column">
 					<h2>درباره ما</h2>
 					<p>توضیحات</p>
-				</div>
+				</div> */}
 				<div className="footer__column">
 					<h2>راه های ارتباطی</h2>
 					<div>

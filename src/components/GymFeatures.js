@@ -9,7 +9,7 @@ const GymFeatures = () => {
 			description: 'آقای مظاهر یزدانی',
 			btnText: 'دیدن تمام مدارک و مدال ها',
 			content: '1',
-			modalDescription: 'آقای مظاهر یزدانی دارای مدارک x',
+			modalDescription: 'آقای مظاهر یزدانی',
 			images: ['10.jpeg', '12.jpeg', '13.jpeg', '14.jpeg']
 		},
 		{
