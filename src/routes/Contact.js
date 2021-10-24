@@ -1,8 +1,43 @@
 import Layout from '../components/Layout';
 import PagesHeader from '../components/PagesHeader';
 import '../styles/Contact.css';
+import emailjs from 'emailjs-com';
+import useMessageContext from '../contexts/MessageContext';
 
 const Contact = () => {
+	const [, messagesDispatch] = useMessageContext();
+	(function () {
+		emailjs.init("user_yP5JeaRFtXLsCkR4bP0Qt");
+	})();
+
+	const sendMail = e => {
+		e.preventDefault();
+		let fromName = document.getElementById('nameInput');
+		let fromEmail = document.getElementById('emailInput');
+		let message = document.getElementById('messageInput');
+		let submitBtn = document.getElementById('submitBtn');
+		submitBtn.disabled = true;
+		submitBtn.style.cursor = 'wait';
+		const data = {
+			from_name: fromName.value,
+			from_email: fromEmail.value,
+			message: message.value
+		};
+		emailjs.send('service_2sp0gee', 'template_n0bshc1', data)
+			.then(res => {
+				submitBtn.disabled = false;
+				submitBtn.style.cursor = 'pointer';
+				fromName.value = '';
+				fromEmail.value = '';
+				message.value = '';
+				messagesDispatch({ type: 'SET_MESSAGES', payload: { dispatch: messagesDispatch, message: 'ایمیل با موفقیت ارسال شد!', status: 200 } });
+			})
+			.catch(err => {
+			submitBtn.disabled = false;
+			submitBtn.style.cursor = 'pointer';
+				messagesDispatch({ type: 'SET_MESSAGES', payload: { dispatch: messagesDispatch, message: err.message, status: 300 } });
+			});
+	};
 	return (
 		<Layout headerClassNames="tr__header">
 			<div className="contact">
@@ -14,22 +49,19 @@ const Contact = () => {
 					<div className="contact__info">
 						<div className="contact__messageForm">
 							<h2>فرستادن ایمیل</h2>
-							<form onSubmit={e => e.preventDefault()}>
+							<form onSubmit={sendMail}>
 								<div>
 									<label>اسم
-										<input type="text" placeholder="اسم" name="name" required />
+										<input type="text" placeholder="اسم" name="name" id="nameInput" required />
 									</label>
 									<label>آدرس ایمیل
-										<input type="email" placeholder="آدرس ایمیل" name="email" required />
-									</label>
-									<label>موضوع
-										<input type="text" placeholder="موضوع" name="subject" required />
+										<input type="email" placeholder="آدرس ایمیل" name="email" id="emailInput" required />
 									</label>
 								</div>
 								<label>پیام
-									<textarea type="text" placeholder="پیام" name="message" required></textarea>
+									<textarea type="text" placeholder="پیام" name="message" id="messageInput" required></textarea>
 								</label>
-								<button type="submit">ارسال</button>
+								<button id="submitBtn" type="submit">ارسال</button>
 							</form>
 						</div>
 						<div className="contact__address">
